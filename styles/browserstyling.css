@@ -1,0 +1,435 @@
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+  }
+  
+  
+  ::-webkit-scrollbar-thumb:vertical {
+    height: 50px;
+    background-color: #DDB2FF;
+    border-radius: 3px;
+  }
+
+  ::selection {
+    background-color: transparent;
+    color: #1F5F88;
+}
+
+
+  /* But hey, satisfaction brought it back 🐱  */
+
+@font-face {
+    font-family: 'silkscreen';
+    src: url('../fonts/silkscreen_normal/silkscreen.eot');
+    src: url('../fonts/silkscreen_normal/silkscreen.woff') format('woff'),
+         url('../fonts/silkscreen_normal/silkscreen.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'varelaRound';
+    src: url('../fonts/varelaround_regular/VarelaRound-Regular-webfont.eot');
+    src: url('../fonts/varelaround_regular/VarelaRound-Regular-webfont.woff') format('woff'),
+         url('../fonts/varelaround_regular/VarelaRound-Regular-webfont.ttf') format('ttf');
+    font-weight: normal;
+    font-size: normal;
+}
+
+@font-face {
+    font-family: 'lilita';
+    src: url('../fonts/lilita_one/lilitaone-regular.ttf');
+    src: url('../fonts/lilita_one/lilitaone-regula.woff') format('woff'),
+         url('../fonts/lilita_one/lilitaone-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-size: normal;
+}
+
+.en {
+    display: inline-block;
+}
+
+.fr {
+    display: none;
+}
+
+hr {
+    opacity: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'varelaRound' ;
+    margin: 0;
+    padding: 0;
+    transition: 0.4s;
+}
+
+/* TOP SWITCHES  */
+.switches {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.switch {
+    margin: 2vh 0 0 2vh;
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 34px;
+  }
+
+  #nightmode, #language {
+    appearance: none;
+
+  }
+  
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+
+  .night {
+    background-color: #D1BCFF;
+  }
+
+  .lang {
+    background-color:#2D9ADF;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  .night:before {
+    background: url("../images/moon.svg");
+    background-size: 26px;
+    background-repeat: no-repeat;
+  }
+
+  .lang:before {
+    background: url("../images/earth.svg");
+    background-size: 26px;
+    background-repeat: no-repeat;
+  }
+  
+  input:checked + .night {
+    background-color: #FEFFBC;
+  }
+
+  input:checked + .lang {
+    background-color: #F2C700;
+  }
+
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+/* header and title style  */
+
+header {
+    background: white url(../images/cable.svg) no-repeat right top;
+    height: 100vh;
+}
+
+.greetWindow {
+    transform: translateX(calc(50vw - 280px));
+    background-color: #FEFFBC ;
+    border-radius: 15px;
+    border: solid 2px black;
+    width: 560px;
+    height: 350px;
+    text-align: center;
+}
+
+.innerGreetWindow {
+    margin-top: 20px;
+    border-top: solid black 2px;
+}
+/* section style */
+.section {
+    background: #FEFFBC url(../images/jack.svg) no-repeat right bottom;
+}
+
+.sectionTitle {
+  background: #FEFFBC;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    width: 100%;
+    height: 15vh;
+}
+
+.column {
+    margin-left: 10vw;
+    width: 30vw;
+}
+
+.mainText {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 1.2rem;
+}
+
+.jack {
+  float: right;
+  width: 30vw;
+  margin-right: 100px;
+  transform: translateY(-200px);
+}
+
+.projectsWindow {
+  position: relative;
+  margin: 10vh 0 25vh 10vw;
+  background-color: #EDF5F5;
+  border: solid 2px black;
+  border-radius: 15px;
+  height: 182px;
+  width: 30vw;
+  color: black;
+}
+
+
+.windowClose {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  width: 28px;
+  height: auto;
+}
+
+.innerWindow {
+  position: absolute;
+  bottom: 3vw;
+  border-top: black solid 2px;
+  text-align: center;
+}
+
+#polaroid {
+  transform: translate(15vw, 421px) rotate(8deg);
+}
+
+/* footer style */
+footer {
+    background: #FEFFBC;
+}
+
+.mediaButtons {
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+}
+
+.githubTxt {
+  transform: translateX(-15vw) translateY(-25px) rotate(-5deg);
+}
+
+#github {
+  transform: translateX(-15vw) rotate(-18deg);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#github:hover, #github:active {
+  transform: translateX(-15vw) rotate(-5deg);
+
+}
+
+.linkedinTxt {
+  transform: translateX(8vw) translateY(5vh) rotate(3deg);
+}
+
+#linkedin {
+    transform: translateX(10vw) translateY(10vh) rotate(15deg);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    
+}
+
+#linkedin:hover, #linkedin:active {
+  transform: translateX(10vw) translateY(10vh) rotate(0deg);
+}
+
+/* contact form and such  */
+
+.contactForm {
+    color: black;
+}
+
+input[type=text], textarea {
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: 'varelaRound' ;
+  }
+  
+  input[type=submit] {
+    background-color: #2D9ADF;
+    color: #EDF5F5;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 #00000048 ;
+  }
+
+  input:focus, textarea:focus { 
+    outline: none !important;
+    border-color: #DDB2FF;
+    box-shadow: 0 0 10px #DDB2FF;
+  }
+
+  
+  
+  form {
+    text-align: center;
+    border-radius: 5px;
+    background-color: #EDF5F5;
+    box-shadow: 4px 5px 0 #00000048 ;
+  }
+
+  textarea {
+      height: 200px;
+      resize: none;
+  }
+
+/* THIS STICKERY LOOKING STROKE*/
+
+h1 {
+    color: #2D9ADF;
+    font-size: 120px ;
+    margin: 0;
+}
+
+h2 {
+    color: #2D9ADF;
+    font-size: 90px;
+}
+
+h3 {
+    padding-top: 20px;
+    color: #DDB2FF;
+    font-size: 60px;
+    margin: -0 -100px 0 0;
+}
+
+.sticker {
+    display: inline-grid;
+    grid-template-areas: "text";
+    place-items: center;
+    font-family: 'lilita';
+ }
+
+ .sticker > *, .sticker::before, .sticker::after {
+     grid-area: text;
+ }
+
+ .sticker::before, .sticker::after {
+     content: attr(data-text);
+ }
+
+ .sticker::before {
+     -webkit-text-stroke: 25px #fff;
+     background: no-repeat linear-gradient(#fff, #fff) 100% 65% / 100% 60%;
+ }
+
+ .sticker::after {
+     text-shadow: 10px 15px 0 rgba(0, 0, 0, 0.219);
+     z-index: -1;
+ }
+
+.stickerSpan {
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 2px 2px 0 #1F5F88;
+}
+
+.purpleSpan {
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 2px 2px 0 #CB8EFC;
+}
+
+
+/* LITTLE TEXT MESSAGE LIKE THINGIES */
+
+.pixel {
+    font-family: 'silkscreen';
+}
+
+#inset_border {
+    position: relative;
+    height: 80px;
+    width: 30vw;
+    background-color: black;
+    box-sizing: border-box;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 94% 74%, 0% 75%);
+    margin-left: 10vw;
+    margin-bottom: 3vh;
+
+}
+
+.inset {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: calc(80px - 6px);
+    width: calc(30vw - 4px);
+    background-color: #EDF5F5;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 95% 75%, 0% 75%);
+    color: black;
+}
+
+/* buttons style */
+
+.buttonLink {
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    box-shadow: 2px 2px 0 #000048;
+}
+
+.buttonLink:hover, .buttonLink:active {
+  transform: translate(2px,2px);
+  box-shadow: 1px 1px 0 #000048;
+}
