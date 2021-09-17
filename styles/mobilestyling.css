@@ -21,7 +21,6 @@
     src: url('../fonts/varelaround_regular/VarelaRound-Regular-webfont.woff') format('woff'),
          url('../fonts/varelaround_regular/VarelaRound-Regular-webfont.ttf') format('ttf');
     font-weight: normal;
-    font-size: normal;
 }
 
 @font-face {
@@ -30,7 +29,6 @@
     src: url('../fonts/lilita_one/lilitaone-regula.woff') format('woff'),
          url('../fonts/lilita_one/lilitaone-regular.woff2') format('woff2');
     font-weight: normal;
-    font-size: normal;
 }
 
 .en {
@@ -109,7 +107,6 @@ h3 {
 #pick {
     float: right;
     margin-right: 5vw;
-    /* margin-top: -20px; */
     width: 25vw;
     max-width: 120px;
     height: auto;
