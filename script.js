@@ -22,25 +22,35 @@ function language() {
     }
 }
 
+let stickers = document.getElementsByClassName("stickyNote");
+
 function nightStyle() {
     if (window.matchMedia("(min-width: 1023px)").matches) {
         starryNight()
-        document.getElementById("body").style.cssText = "background-color: #9871EA; color: white;";
-        document.getElementById("header").style.cssText = "background-image: linear-gradient(0deg, rgba(152,113,234,1) 0%, rgba(0,0,0,0) 100%), url(images/nightsky2.jpg); background-size: cover; background-attachment: scroll, fixed;"
+        document.getElementById("body").style.cssText = "background-color: #7d57cf; color: white;";
+        document.getElementById("header").style.cssText = "background-image: linear-gradient(0deg, rgba(125,87,207,1) 0%, rgba(0,0,0,0) 100%), url(images/nightsky2.jpg); background-size: cover; background-attachment: scroll, fixed;"
         document.getElementById("greetWindow").style.cssText = "background-color: #9871EA; border: solid 2px white";
         document.getElementById("innerGreetWindow").style.cssText = "border-top: solid 2px white";
+        document.getElementById("pick").src="images/pick-d.png";
+        Array.prototype.forEach.call(stickers, function(el) {
+            el.classList.add("stickyNoteDark");
+        })
     } else {
-        document.getElementById("body").style.cssText = "background-color: #9871EA; color: white;";
+        document.getElementById("body").style.cssText = "background-color: #7d57cf; color: white;";
     }
 }
 
 function lightStyle() {
     removeStars()
-    document.getElementById("body").style.cssText = "background-color: #FEFFBC; color: black;";
-    document.getElementById("header").style.cssText = "background: linear-gradient(0deg, rgba(254,255,188,1) 0%, rgba(255,255,255,1) 100%);";
-    document.getElementById("greetWindow").style.cssText = "background-color: #FEFFBC; border: solid 2px black";
-    document.getElementById("innerGreetWindow").style.cssText = "border-top: solid 2px black";
     if (window.matchMedia("(min-width: 1023px)").matches) {
+        document.getElementById("body").style.cssText = "background-color: #FEFFBC; color: black;";
+        document.getElementById("header").style.cssText = "background: linear-gradient(0deg, rgba(254,255,188,1) 0%, rgba(255,255,255,1) 100%);";
+        document.getElementById("greetWindow").style.cssText = "background-color: #FEFFBC; border: solid 2px black";
+        document.getElementById("innerGreetWindow").style.cssText = "border-top: solid 2px black";
+        document.getElementById("pick").src="images/pick.svg";
+        Array.prototype.forEach.call(stickers, function(el) {
+            el.classList.remove("stickyNoteDark");
+        })
             
     } else {
         document.getElementById("body").style.cssText = "background-color: #FEFFBC; color: black;";
@@ -59,7 +69,7 @@ function starryNight() {
         let star = document.createElement("div");
         star.className = "stars";
         star.id = "schtarf"+i.toString();
-        star.setAttribute("style","left: "+positionX+"vw; top: "+positionY+"vh; width: "+size+"px; height: "+size+"px; transform:rotate("+rotation+"deg);");
+        star.setAttribute("style","left: "+positionX+"vw; top: "+positionY+"vh; width: "+size+"px; height: "+size+"px; transform: rotate("+rotation+"deg);");
         document.getElementById("header").appendChild(star);
         }
 }
