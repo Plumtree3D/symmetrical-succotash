@@ -94,6 +94,7 @@ input {
 
 /* TOP SWITCHES  */
 .switches {
+  position: fixed;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -219,6 +220,7 @@ header {
 
 #greetWindow {
   position: absolute;
+  top: 22%;
   transform: translateX(calc(50vw - 280px));
   background-color: #FEFFBC;
   border-radius: 15px;
@@ -243,7 +245,7 @@ header {
   background: url(../images/jack.svg) no-repeat right bottom;
 }
 
-.sectionTitle {
+.sectionTitle, .terms {
   text-align: center;
 
 }
@@ -541,7 +543,8 @@ footer {
 }
 
 #github:hover,
-#github:active {
+#github:active,
+#github:focus {
   transform: translateX(-5vw) rotate(-5deg);
 
 }
@@ -558,7 +561,8 @@ footer {
 }
 
 #linkedin:hover,
-#linkedin:active {
+#linkedin:active,
+#linkedin:focus {
   transform: translateX(10vw) translateY(10vh) rotate(0deg);
 }
 
@@ -749,4 +753,37 @@ h3 {
 .buttonLink:active {
   transform: translate(2px, 2px);
   box-shadow: 1px 1px 0 #000048;
+}
+
+.privacy {
+  position: absolute;
+  left: 50%;
+  bottom: 25px;
+  transform: translate(-50%);
+  color: black;
+  text-decoration: none;
+}
+
+.privacy:hover {
+  text-decoration: wavy underline;
+}
+
+.goBack {
+  position: absolute;
+  left: 50px;
+  top: 5vh;
+  transform: rotate(5deg);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+
+.goBack:hover,
+.goBack:active,
+.goBack:focus {
+  transform:rotate(-5deg);
+}
+
+.terms {
+  background: no-repeat right -2% bottom -5% url(../images/tag.png) ;
 }

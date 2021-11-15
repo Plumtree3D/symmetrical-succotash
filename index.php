@@ -23,7 +23,7 @@
     <header id="header">
         <div class="switches">
             <label class="switch">
-                <input aria-label="Dark mode" type="checkbox" id="nightmode" onclick="nightmode()">
+                <input aria-label="Dark/ light mode" type="checkbox" id="nightmode" onclick="nightmode()">
                 <span class="slider night"></span>
             </label>
 
@@ -285,7 +285,10 @@
             <a id="linkedin" href="https://www.linkedin.com/in/c%C3%A9leste-robert-casals/" target="blank"><img
                     src="images/linkedin.svg" alt="Link to my LinkedIn"></a>
             <img id="imgButton" src="images/button.svg" alt="éléments décoratifs" width="300">
+
         </div>
+<a class="fr privacy" href="privacy.php"> Mentions légales </a>
+<a class="en privacy" href="privacy.php"> Terms & Privacy </a>
 
     </footer>
 
