@@ -9,6 +9,7 @@ require 'head.php';
 <body id="body">
     <img id=cable class="browserElements" src="images/cable.svg" alt="">
     <header id="header"> 
+        <a href="#scroll01" class="hiddenAnchor"> Jump to content </a>
 <?php include 'switches.html' ?>
         <div id="greetWindow">
             <span class="pixel en"> Hello and welcome to... </span>

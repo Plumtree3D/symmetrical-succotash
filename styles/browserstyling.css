@@ -966,3 +966,20 @@ h3 {
 .pageContent {
   padding: 15%;
 }
+
+.hiddenAnchor {
+  position: absolute;
+
+  top: -200px;
+  left: 50%;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #FEFFBC;
+  color: black;  
+  transform: translateX(-50%);
+  transition: 0.2s;
+}
+
+.hiddenAnchor:focus {
+  top: 0;
+}
